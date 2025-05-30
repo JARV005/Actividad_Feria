@@ -317,3 +317,25 @@ footer p a:hover {
     font-size: 0.7rem;
 }
 }
+
+
+/* ============================
+   12. TABLE EN SCHEDULE
+============================= */
+    .schedule__table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .schedule__header, .schedule__cell {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+   .schedule__header {
+      background-color: #a7ffeb;
+    }
+    .schedule__row {
+      background-color: #e0f2f1;
+    }
+
