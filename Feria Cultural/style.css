@@ -1,4 +1,6 @@
-/*Estilos Generales.*/
+/* ============================
+   1. ESTILOS GENERALES.
+============================= */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -26,7 +28,9 @@ img {
     display: block;
 }
 
-/*Header*/
+/* ============================
+   2. HEADER.
+============================= */
 header {
     background-color: #023047;
     color: #FFFFFF;
@@ -55,7 +59,10 @@ header .subtitle {
     color: #8ECAE6;
     margin-top: 5px;
 }
-/*Navegacion*/
+
+/* ============================
+   3. NAVEGACION.
+============================= */
 nav {
     background: #219EBC;
     color: #FFFFFF;
@@ -85,4 +92,164 @@ nav ul li a {
     display: block;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3 ease;
+}
+
+/* ============================
+   4. PSEUDO-CLASE :HOVER en enlaces de navegacion.
+============================= */
+nav ul li a:hover {
+    background-color: #FFB703;
+    color: #023047;
+}
+
+/* ============================
+   5. PSEUDO-CLASE :FOCUS en enlaces para accesibilidad.
+============================= */
+nav ul li a:focus {
+    outline: 3px solid #FFB703;
+    outline-offset: 2px;
+    background-color: #fdbb2b;
+    color: #023047;
+}
+
+nav ul li a.active {
+    background-color: #FFB703;
+    color: #023047;
+    font-weight: bold;
+}
+
+/* ============================
+   6. CONTENIDO PRINCIPAL.
+============================= */
+main {
+    padding: 25px 0;
+}
+
+#crafts-showcase {
+    padding: 25px;
+    background-color: #FFFFFF;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#crafts-showcase h2 {
+    text-align: center;
+    color: #FB8500;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+#crafts-showcase .section-description {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    color: #023047;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================
+   7. GRID DE ARTESANIAS CON FLEXBOX
+============================= */
+.crafts-grids {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; 
+    justify-content: center;
+}
+
+.crafts-item {
+    background: #FFFFFF;
+    border: 1px solid #8ECAE6;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    flex-basis: calc(33.333% - 42px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: trasnform 0.3s ease, box-shadow 0.3 ease;
+}
+
+.crafts-item img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #8ECAE6;
+}
+
+.crafts-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #219EBC;
+    font-size: 1.5rem;
+}
+
+.crafts-item .artisan-name {
+    font-size: italic;
+    color: #FB8500;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.crafts-item .craft-description {
+    font-size: 0.95rem;
+    color: #023047;
+    flex-grow: 1;
+}
+
+/* ============================
+   8. PSEUDO-CLASE :HOVER 
+============================= */
+.crafts-item:hover {
+    border-color: #FFB703;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+}
+
+/* ============================
+   9. PSEUDO-CLASE :NTH-CHILD para aternar estilos sutilmente.
+============================= */
+.crafts-item:nth-child(even) {
+    border-top: 4px solid #219EBC;
+    padding-top: calc(20px - 4px);
+}
+
+
+.crafts-item:nth-child(odd) {
+    border-top: 4px solid #FB8500;
+    padding-top: calc(20px - 4px);
+}
+
+/* ============================
+   10. FOOTER.
+============================= */
+footer {
+    background: #023047;
+    color: #8ECAE6;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 35px;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+footer p a {
+    color: #FFB703;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    color: #FB8500;
+    text-decoration: underline;
 }
